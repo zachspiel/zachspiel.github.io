@@ -13,6 +13,8 @@
 
 	 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
 	 <Style>
 	 	.carousel-item {
   height: 100vh;
@@ -22,27 +24,29 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  justify-content: center;
+  align-items: center;
 }
 	 </Style>
 </head>
-<body>
-  <header>
-    <div id="carouselExampleIndicators" class="carousel" data-ride="carousel" data-offset="150">
-      <div class="carousel-inner" role="listbox">
-        <!-- Slide One - Set the background image for this slide in the line below -->
-        <div class="carousel-item active" style="background-image: url('images/banner.jpeg')">
-          <div class="carousel-caption d-none d-md-block">
-            <h1>Zachary Spielberger</h1>
-            <p>Full Stack Developer</p>
+<body onload="document.body.style.opacity='1'">
+
+ <section id="intro" class="clearfix animated animatedFadeInUp fadeInUp">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-6 intro-info order-md-first order-last">
+          <h2>Zachary Spielberger</h2>
+          <div>
+            <a href="#about" class="btn-get-started scrollto">About Me</a>
           </div>
         </div>
-      </div>
-    </div>
-  </header>
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      </div>
+
+    </div>
+  </section>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Zachary Spielberger</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -66,61 +70,93 @@
   </nav>
 
   <div class="container-fluid">
-  
+
+  <section id="about">
   <div class="row" id="about-me">
-  	<div class="col-md-12">
-  		<h3>About me</h3>
-  		<p>I have 5 years of experience programming in front end and back-end languages. </p>
+    <div class="col-md-6">
+      <img src="images/professional.jpg" style="width:40%;">
+    </div>
+  	<div class="col-md-6">
+  		<h3 class="heading deasktop">About me</h3>
+  		<p>I have 5 years of experience programming in front end and back-end languages.</p>
   	</div>
   </div>
+  </section>
 
+  <section id="education">
   <div class="row" id="nau">
     <div class="col-md-4 col-xs-12">
-      <h3 class="heading desktop">Northern Arizona University</h3>
+      <h3 class="heading desktop">Bachelor of Science in Computer Science</h3>
     </div>
     <div class="col-md-8 cs-sm-12 about">
       <h3>Projected Graduation Spring 2021</h3>
-      <p> Bachelor of Science in Computer Science</p>
+      <p>Northern Arizona University</p>
       <ul>
-      	<li></li>
-      	<li></li>
-      	<li></li>
-      	<li></li>
+      	<li>Departmental GPA 3.5</li>
+      	<li>Recipient of Lumberjack Scholarship</li>
       </ul>
     </div>
   </div>
+</section>
 
-  <div class="row" id="about">
-    <div class="col-md-4 col-xs-12">
-      <h3 class="heading desktop">Experience</h3>
+  <div class="row animated animatedFadeInUp fadeInUp" id="about">
+    <div class="col-md-4 col-sm-12">
+      <h3 class="heading desktop" >Experience</h3>
     </div>
     <div class="col-md-8 cs-sm-12 about">
       <h3>Web Developer Intern Summer 2019</h3>
       <p> True North Companies LLC</p>
       <ul>
       	<li>Managed and updated websites for a portfolio of companies including real estate, travel medicine, and kid's birthday parties.</li>
-      	<li>Utilized front-end and back-end languages such as PHP,MySQL,HTML,CSS,JavaScript, and JQuery.</li>
+      	<li>Utilized front-end and back-end languages such as PHP, MySQL, HTML, CSS, JavaScript, and JQuery.</li>
       	<li>Updated websites to meet ADA compliance.</li>
       	<li>Effectively managed time and met deadlines.</li>
       </ul>
     </div>
   </div>
 
-    <div class="row flex-grow-1">
-    <div class="col-md-8" style="background-color:white;color:#454647;">
-      <p class="heading">BY THE <span class="accent">NUMBERS</span></p>
+  <div class="row bg-color" id="projects">
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <h3 class="heading desktop">Projects</h3>
     </div>
-    <div class="col-md-4" style="background-color:#a8a7b2;color:white">
-      <p>The good news: every single company we run is profitable.
-          The great news: every company is also growing at an
-          aggressive clip. This combination enables us to fund future
-          aqquisitions completely internally. Now THAT'S money.
-      </p>
+    <div class="col-md-8 col-sm-12 col-xs-12">
+      <a href="http://moviephone.herokuapp.com/"><h3>Moviefone</h3></a>
+      <p>Find local movies and showtimes, made using Python,Flask,HTML.</p>
+    </div>
+  </div>
+
+  <div class="row" id="projects">
+    <div class="col-md-12">
+      <a href="https://thetatau.herokuapp.com/index.php"><h3>Thetataunau.com</h3></a>
+      <p>Designed and created a website for Omicron Epsilon chapter at NAU with HTML,CSS,JS,PHP and MySQL.</p>
+    </div>
+  </div>
+
+  <div class="row bg-color" id="projects">
+    <div class="col-md-12">
+      <h3>Continentalweatherservice.com</h3>
+      <p>Designed and created a website for a small business in Mesa, Arizona.</p>
+    </div>
+  </div>
+
+  <div class="row" id="projects">
+    <div class="col-md-12">
+      <h3>Slack Bot</h3>
+      <p>A Slackbot made with JS to keep reminding your coworkers.</p>
+    </div>
+  </div>
+
+  <div class="row bg-color" id="projects">
+    <div class="col-md-12">
+      <h3>Impossible Tic Tac Toe</h3>
+      <p>Tic Tac toe that is impossible to beat using Java and AI.</p>
     </div>
   </div>
 </div>
 <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
