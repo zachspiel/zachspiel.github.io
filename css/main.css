@@ -48,6 +48,21 @@ h2 .display-4{
   padding:30px 0 80px 80px;
 }
 
+.bg-dark-row{
+	background: #2d2b46;
+	background-size: cover;
+}
+
+.bg-dark-row p{
+	color: white;
+	font-size: 15px;
+}
+
+.bg-dark-row h3{
+	color: white;
+	font-size: 28px;
+	font-weight: 700;
+}
 @media screen and (max-width: 600px) {
 	#about-me,#nau,#about{
 		text-align: left;
