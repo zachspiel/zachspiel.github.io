@@ -7,6 +7,9 @@
  	 <!-- Bootstrap core CSS -->
      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 	 <!-- Custom styles for this template -->
 	 <link href="css/modern-business.css" rel="stylesheet">
 	 <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -30,7 +33,7 @@
 	 </Style>
 </head>
 <body onload="document.body.style.opacity='1'">
-
+<a href="javascript:" id="return-to-top"><i class="fa fa-arrow-up" style="font-szie:24px;color:white;"></i></a>
  <section id="intro" class="clearfix animated animatedFadeInUp fadeInUp">
     <div class="container d-flex h-100">
       <div class="row justify-content-center align-self-center">
@@ -74,18 +77,25 @@
   <section id="about">
   <div class="row" id="about-me">
     <div class="col-md-6">
-      <img src="images/professional.jpg" style="width:40%;">
+      <img src="images/headshot.jpg" style="width:40%;" class="mobile-hide-img">
     </div>
   	<div class="col-md-6">
   		<h3 class="heading deasktop">About me</h3>
-  		<p>I have 5 years of experience programming in front end and back-end languages.</p>
+  		<p>I have been programming since my junior year of high school, where my passion began. I love programming because I love puzzles.
+				Problem solving comes natural to me and I enjoy trying to figure out something challenging and difficult.
+				I also like that programming allows me the ability to express myself creatively, as well as the opportunity to help others do the same.
+				I also like the programming community as some of my fondest memories are those had when working in groups to solve a common issue.
+			</p>
+			<p>I am currently a Web Developer Intern at Outlier Companies where I modify existing websites for a portfolio of companies including
+				real estate, travel medicine, and childrens birthday parties.
+			</p>
   	</div>
   </div>
   </section>
 
   <section id="education">
   <div class="row" id="nau">
-    <div class="col-md-4 col-xs-12">
+    <div class="col-md-4 col-sm-12">
       <h3 class="heading desktop">Bachelor of Science in Computer Science</h3>
     </div>
     <div class="col-md-8 cs-sm-12 about">
@@ -115,9 +125,15 @@
     </div>
   </div>
 
+	<div class="row bg-color" id="projects">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <h3 id="projects-title">Projects</h3>
+    </div>
+  </div>
+
   <div class="row bg-color" id="projects">
-    <div class="col-md-4 col-sm-12 col-xs-12">
-      <h3 class="heading desktop">Projects</h3>
+    <div class="col-md-4">
+      <img src="images/moviePhone.png" width="200" height="200" class="mobile-hide-img">
     </div>
     <div class="col-md-8 col-sm-12 col-xs-12">
       <a href="http://moviephone.herokuapp.com/"><h3>Moviefone</h3></a>
@@ -126,33 +142,53 @@
   </div>
 
   <div class="row" id="projects">
-    <div class="col-md-12">
+    <div class="col-md-8 col-sm-12 text-sm-center">
       <a href="https://thetatau.herokuapp.com/index.php"><h3>Thetataunau.com</h3></a>
       <p>Designed and created a website for Omicron Epsilon chapter at NAU with HTML,CSS,JS,PHP and MySQL.</p>
     </div>
+		<div class="col-md-4 d-sm-none">
+			<img src="images/OTLetters.jpg" width="200" height="200" class="mobile-hide-img">
+		</div>
   </div>
 
   <div class="row bg-color" id="projects">
-    <div class="col-md-12">
+		<div class="col-md-4">
+			<img src="images/CWS.png" width="200" height="200" class="mobile-hide-img">
+		</div>
+    <div class="col-md-8">
       <h3>Continentalweatherservice.com</h3>
       <p>Designed and created a website for a small business in Mesa, Arizona.</p>
     </div>
   </div>
 
   <div class="row" id="projects">
-    <div class="col-md-12">
+    <div class="col-md-8">
       <h3>Slack Bot</h3>
       <p>A Slackbot made with JS to keep reminding your coworkers.</p>
     </div>
+		<div class="col-md-4">
+			<img src="images/SlackBot.jpg" width="200" height="200" class="mobile-hide-img">
+		</div>
   </div>
 
   <div class="row bg-color" id="projects">
-    <div class="col-md-12">
+		<div class="col-md-4">
+			<img src="images/TicTacToe.gif" width="200" height="200" class="mobile-hide-img">
+		</div>
+    <div class="col-md-8">
       <h3>Impossible Tic Tac Toe</h3>
       <p>Tic Tac toe that is impossible to beat using Java and AI.</p>
     </div>
   </div>
 </div>
+<footer id="footer" class="section-bg">
+	<div class="container">
+		<div class="copyright">
+			&copy; Copyright <strong>Zachary Spielberger</strong>. All Rights Reserved.
+		</div>
+	</div>
+</footer><!-- #footer -->
+
 <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
