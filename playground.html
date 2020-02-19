@@ -22,6 +22,7 @@
 	</style>
 </head>
 <body>
+	<p> <- Return to main page</p>
 	<div id="header">SNAKE - LENGTH: 0</div>
 	<div id="stage"></div>
 	<div id="panel">
@@ -53,7 +54,7 @@
 			length:0
 		};
 
-		/* Define a food object */ 
+		/* Define a food object */
 		var food = {
 			row:5,
 			col:9
@@ -105,7 +106,7 @@
 			stageDiv[snake.row][snake.col].style.backgroundColor = "green";
 
 			/* render the snake body */
-			for ( var i = 0; i < snake.body.length; i++ ) { 
+			for ( var i = 0; i < snake.body.length; i++ ) {
 				var segment = snake.body[i];
 				stageDiv[segment.row][segment.col].style.backgroundColor = "green";
 				stageDiv[segment.row][segment.col].style.border = "1px solid black";
@@ -176,7 +177,7 @@
 
 		function moveFood() {
 			var goodTiles = []
-			
+
 			/* Loop through the board row and cols (not border ) */
 			for (var row = 1; row < totalRows-1; row++) {
 				for(var col = 1; col < totalCols-1; col++) {
@@ -234,7 +235,7 @@
 					snake.dir="RIGHT";
 					break;
 			}
-			
+
 			if(startGameFlag) {
 				startGameFlag = false;
 				startMoveTimer();
@@ -244,7 +245,7 @@
 
 		function startMoveTimer(){
 			stopMoveTimer();
-			moveTimer = setInterval(tickMoveTimer, 150);
+			moveTimer = setInterval(tickMoveTimer, 200);
 		}
 
 		function stopMoveTimer(){
@@ -302,7 +303,7 @@
 
 					stageDiv[row][col].style.boxSizing = "border-box";
 				}
-			} 
+			}
 		}
 
 		function getRndInteger(min, max) {
