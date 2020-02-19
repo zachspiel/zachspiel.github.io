@@ -40,8 +40,8 @@ h2 .display-4{ height:100vh; }
 #name {font-size:48px;color:white;margin-left: 150px}
 
 @media only screen and (max-width: 600px) {
-    #name,.btn-get-started {
-        margin-left: 100px;
+    #name, .btn-get-started {
+        margin-left: 50px;
     }
 }
 
