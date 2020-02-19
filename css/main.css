@@ -43,6 +43,10 @@ h2 .display-4{ height:100vh; }
     #name, .btn-get-started {
         margin-left: 0px !important;
     }
+
+    #name {
+      font-size: 36px;
+    }
 }
 
 .btn-get-started { margin-left: 200px; color:white;}
