@@ -41,7 +41,7 @@ h2 .display-4{ height:100vh; }
 
 @media only screen and (max-width: 600px) {
     #name, .btn-get-started {
-        margin-left: 50px;
+        margin-left: 0px !important;
     }
 }
 
