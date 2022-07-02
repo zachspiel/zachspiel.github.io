@@ -16,8 +16,6 @@ My latest portfiolio website created with React, TypeScript and Chakra UI.
 
 ## Deployment
 
-To deploy this project run
-
 ```bash
   yarn deploy
 ```

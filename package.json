@@ -1,7 +1,7 @@
 {
   "name": "zachspiel-portfolio-site",
   "version": "0.1.0",
-  "homepage": "http://zachspiel.github.io",
+  "homepage": "https://zachspiel.github.io",
   "private": false,
   "dependencies": {
     "@chakra-ui/react": "^2.2.1",
