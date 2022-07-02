@@ -1,0 +1,27 @@
+.chakra-badge > svg {
+  margin-top: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+iframe {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+}
+
+.project-image {
+  height: 300px;
+  width: 400px;
+  max-width: 100%;
+}
+
+.company-logo {
+  height: 200px;
+  width: 400px;
+  max-width: 100%;
+  background: #ffffff;
+}
+
+.chakra-wrap__listitem > div {
+  height: 100% !important;
+}
