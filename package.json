@@ -1,7 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "zachspiel-portfolio-site",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "http://zachspiel.github.io",
+  "private": false,
   "dependencies": {
     "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11.0.0",
@@ -22,6 +23,8 @@
     "web-vitals": "^0.2.2"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -43,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "sass": "^1.53.0"
   }
 }
