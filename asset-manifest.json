@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bac7af88.css",
+    "main.js": "/static/js/main.414795a8.js",
+    "static/js/377.b7c09145.chunk.js": "/static/js/377.b7c09145.chunk.js",
+    "static/media/bobsBurgers.png": "/static/media/bobsBurgers.20a7f69f0f7299c1e676.png",
+    "static/media/visualizingAntarctica.png": "/static/media/visualizingAntarctica.f0208deb276c11d56ff9.png",
+    "static/media/researchPlugin.png": "/static/media/researchPlugin.34f76fb4b78b9141640f.png",
+    "static/media/outlier.jpg": "/static/media/outlier.1c0053914fa48205a6da.jpg",
+    "static/media/secretSanta.png": "/static/media/secretSanta.13247c4be5aa5ef3b822.png",
+    "static/media/nau.png": "/static/media/nau.2bd083696b48277539ba.png",
+    "static/media/microchip.png": "/static/media/microchip.f1f4c1bd654754d86fdc.png",
+    "index.html": "/index.html",
+    "main.bac7af88.css.map": "/static/css/main.bac7af88.css.map",
+    "main.414795a8.js.map": "/static/js/main.414795a8.js.map",
+    "377.b7c09145.chunk.js.map": "/static/js/377.b7c09145.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bac7af88.css",
+    "static/js/main.414795a8.js"
+  ]
+}
