@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Stack, Heading, Wrap, WrapItem } from "@chakra-ui/react";
-import BobsBurgersAPI from "../../images/bobsBurgers.png";
+import bobsBurgers from "../../images/bobs-burgers.png";
 import secretSanta from "../../images/secretSanta.png";
 import visualizingAntarctica from "../../images/visualizingAntarctica.png";
 import ResearchPluginDemo from "../../images/researchPlugin.png";
@@ -21,7 +21,7 @@ const ProjectSection = (): JSX.Element => {
           <WrapItem>
             <ProjectCard
               title="Bob's Burgers REST API"
-              imageUrl={BobsBurgersAPI}
+              imageUrl={bobsBurgers}
               githubUrl="https://github.com/zachspiel/bobsburgers-api"
               websiteUrl="https://www.bobsburgersapi.com/"
               description={BOBS_BURGERS_DESCRIPTION}
@@ -33,7 +33,8 @@ const ProjectSection = (): JSX.Element => {
             <ProjectCard
               title="Secret Santa Generator"
               imageUrl={secretSanta}
-              githubUrl="https://github.com/zachspiel/ResearchPlugin"
+              githubUrl="https://github.com/zachspiel/secret-santa"
+              websiteUrl="https://spiel-secret-santa.herokuapp.com/"
               description={SECRET_SANTA_DESCRIPTION}
               languages={["TypeScript", "React", "MongoDB", "Node"]}
               date={"November 2021 - January 2022"}

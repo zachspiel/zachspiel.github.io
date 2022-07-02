@@ -69,7 +69,7 @@ const ProjectCard = (props: Props): JSX.Element => {
 
   return (
     <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
-      {!props.websiteUrl && props.imageUrl && (
+      {props.imageUrl && (
         <img
           src={props.imageUrl}
           alt={`${props.title} screenshot`}
