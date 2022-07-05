@@ -40,7 +40,7 @@ const ContactForm = (): JSX.Element => {
   });
 
   const sendFormData = async (formData: ContactFormValues) => {
-    let response = await fetch("/contact", {
+    let response = await fetch("https://zachspiel-portfolio-server.herokuapp.com/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

@@ -31,7 +31,6 @@
         "start-all": "yarn run start && (cd server && yarn start)",
         "build": "react-scripts build"
     },
-    "proxy": "http://localhost:5000",
     "eslintConfig": {
         "extends": "react-app"
     },
