@@ -1,3 +1,13 @@
+.chakra-ui-dark {
+  background: #000000;
+
+  input, textArea {
+    background: RGBA(255, 255, 255, 0.16);
+    border: RGBA(255, 255, 255, 0.16);
+    color: #ffffff;
+  }
+}
+
 .chakra-badge > svg {
   margin-top: 0.2rem;
   margin-right: 0.2rem;

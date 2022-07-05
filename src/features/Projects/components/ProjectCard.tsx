@@ -1,5 +1,16 @@
 import React from "react";
-import { Box, Badge, Tag, ThemeTypings, IconButton, Link, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Badge,
+  Tag,
+  ThemeTypings,
+  IconButton,
+  Link,
+  Text,
+  Heading,
+  Stack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { Language } from "../../common/types/types";
 import {
   FaGithub,
@@ -36,7 +47,7 @@ const ProjectCard = (props: Props): JSX.Element => {
         borderRadius="full"
         px="2"
         mr="2"
-        mt={[1, 0]}
+        mt={[1]}
         colorScheme={colorScheme}
         textTransform="none"
         key={`${label} - ${key}`}
@@ -68,22 +79,24 @@ const ProjectCard = (props: Props): JSX.Element => {
   };
 
   return (
-    <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
-      {props.imageUrl && (
-        <img
-          src={props.imageUrl}
-          alt={`${props.title} screenshot`}
-          className="project-image"
-        />
-      )}
-      <Box p={[2, 6]}>
-        <Box
-          mt="1"
-          fontWeight="semibold"
-          display="flex"
-          justifyContent="space-between"
-          lineHeight="tight"
-          noOfLines={1}
+    <Box
+      maxW={"445px"}
+      w={"full"}
+      bg={useColorModeValue("white", "whiteAlpha.100")}
+      boxShadow={"md"}
+      rounded={"md"}
+      p={6}
+      mb={2}
+      overflow={"hidden"}
+    >
+      <Box h={"210px"} bg={"gray.100"} mt={-6} mx={-6} mb={6} pos={"relative"}>
+        <img src={props.imageUrl} alt={props.title} />
+      </Box>
+      <Stack>
+        <Heading
+          color={useColorModeValue("gray.700", "white")}
+          fontSize={"2xl"}
+          fontFamily={"body"}
         >
           {props.title}
           <Link href={props.githubUrl} isExternal>
@@ -103,25 +116,17 @@ const ProjectCard = (props: Props): JSX.Element => {
               />
             </Link>
           )}
+        </Heading>
+        <Box display="flex" flexFlow="row wrap" mt={0}>
+          {props.languages.map((language, index) =>
+            createLanguageChip(language, index)
+          )}
         </Box>
-
-        <Box display="flex" flexFlow="row wrap" alignItems="baseline" mt="1" mb="1">
-          {props.languages.map((language, index) => createLanguageChip(language, index))}
-        </Box>
-        <Box
-          color="gray.500"
-          fontWeight="semibold"
-          letterSpacing="wide"
-          fontSize="xs"
-          textTransform="uppercase"
-        >
-          {props.date}
-        </Box>
-
-        <Text fontSize="sm" maxW="400px">
-          {props.description}
-        </Text>
-      </Box>
+        <Text color={"gray.500"}>{props.description}</Text>
+      </Stack>
+      <Text color={"gray.500"} mt={2}>
+        {props.date}
+      </Text>
     </Box>
   );
 };

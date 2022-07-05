@@ -14,6 +14,14 @@ My latest portfiolio website created with React, TypeScript and Chakra UI.
   yarn start
 ```
 
+Runs the portolio site in development mode.
+
+```bash
+  yarn start-all
+```
+
+Runs the portfolio site and server in development mode to use the contact form.
+
 ## Deployment
 
 ```bash
