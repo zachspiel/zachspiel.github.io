@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import * as dotenv from "dotenv";
-import path from "path";
 import * as nodemailer from "nodemailer";
 
 const router = express.Router();
@@ -14,7 +13,18 @@ const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD || "";
 
 const app = express();
 app.use(cors());
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "origin, X-Requested-With,Content-Type,Accept, Authorization"
+  );
+  next();
+});
+
 app.use("/", router);
 
 const contactEmail = nodemailer.createTransport({
