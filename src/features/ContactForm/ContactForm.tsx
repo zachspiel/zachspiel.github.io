@@ -40,13 +40,23 @@ const ContactForm = (): JSX.Element => {
   });
 
   const sendFormData = async (formData: ContactFormValues) => {
-    let response = await fetch("https://zachspiel-portfolio-server.herokuapp.com/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formData),
+    toast({
+      title: "Sending message...",
+      status: "info",
+      duration: 9000,
+      isClosable: true,
     });
+
+    let response = await fetch(
+      "https://zachspiel-portfolio-server.herokuapp.com/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
 
     let result = await response.json();
 
@@ -79,16 +89,15 @@ const ContactForm = (): JSX.Element => {
     >
       <Flex>
         <Box
-          bg={useColorModeValue("black", "whiteAlpha.100")}
-          color="white"
+          bg={useColorModeValue("#f4f4f4", "#242526")}
           borderRadius="lg"
           m={{ sm: 4, md: 16, lg: 10 }}
           p={{ sm: 5, md: 5, lg: 16 }}
         >
           <Box p={4}>
-            <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
+            <Wrap spacing={{ base: 5, sm: 3, md: 5, lg: 20 }}>
               <WrapItem>
-                <Box>
+                <Box ms={[5, 0]}>
                   <Heading>Contact Me</Heading>
 
                   <Stack
@@ -126,7 +135,7 @@ const ContactForm = (): JSX.Element => {
                       variant="ghost"
                       size="lg"
                       isRound={true}
-                      _hover={{ bg: "#0D74FF" }}
+                      _hover={{ bg: "#0D74FF", color: "#ffffff" }}
                       icon={<BsGithub size="28px" />}
                     />
                     <IconButton
@@ -134,7 +143,7 @@ const ContactForm = (): JSX.Element => {
                       variant="ghost"
                       size="lg"
                       isRound={true}
-                      _hover={{ bg: "#0D74FF" }}
+                      _hover={{ bg: "#0D74FF", color: "#ffffff" }}
                       icon={<FaLinkedin size="28px" />}
                     />
                   </HStack>
@@ -146,7 +155,7 @@ const ContactForm = (): JSX.Element => {
                   borderRadius="lg"
                 >
                   <Box
-                    m={8}
+                    m={[5, 8]}
                     color={colorMode === "light" ? "#0B0E3F" : "white"}
                   >
                     <VStack spacing={5}>
@@ -155,6 +164,7 @@ const ContactForm = (): JSX.Element => {
                         validationSchema={ContactFormSchema}
                         onSubmit={(values, actions) => {
                           sendFormData(values);
+                          actions.resetForm();
                           actions.setSubmitting(false);
                         }}
                       >

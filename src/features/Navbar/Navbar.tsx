@@ -4,35 +4,27 @@ import { Flex, Link } from "@chakra-ui/layout";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { ColorModeSwitcher } from "../common/components/ColorModeSwitcher";
 import { GITHUB_URL, LINKEDIN_URL } from "../common/Constants";
+import { Hide } from "@chakra-ui/react";
 
 const Navbar = (): JSX.Element => {
+  const createNavButton = (label: string, icon: JSX.Element, link: string) => {
+    const isInternal = link.includes("#");
+
+    return (
+      <Link href={link} isExternal={!isInternal}>
+        <IconButton aria-label={label} icon={icon} size="lg" variant="ghost" />
+      </Link>
+    );
+  };
+
   return (
     <Flex justifyContent="flex-end" mt={2}>
       <Flex position="fixed">
-        <Link href={GITHUB_URL} isExternal>
-          <IconButton
-            aria-label="Zach Spiel GitHub"
-            icon={<FaGithub />}
-            size="lg"
-            variant="ghost"
-          />
-        </Link>
-        <Link href={LINKEDIN_URL} isExternal>
-          <IconButton
-            aria-label="Zach Spiel LinkedIn"
-            icon={<FaLinkedin />}
-            size="lg"
-            variant="ghost"
-          />
-        </Link>
-        <Link href="#contact-me">
-          <IconButton
-            aria-label="Contact me"
-            icon={<FaEnvelope />}
-            variant="ghost"
-            size="lg"
-          />
-        </Link>
+        <Hide below="md">
+          {createNavButton("Zach Spiel GitHub", <FaGithub />, GITHUB_URL)}
+          {createNavButton("Zach Spiel LinkedIn", <FaLinkedin />, LINKEDIN_URL)}
+          {createNavButton("Contact me", <FaEnvelope />, "#contact-me")}
+        </Hide>
         <ColorModeSwitcher mr={2} />
       </Flex>
     </Flex>
