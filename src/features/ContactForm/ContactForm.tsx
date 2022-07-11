@@ -3,24 +3,25 @@ import {
   Flex,
   Box,
   Heading,
-  IconButton,
   Button,
   VStack,
   HStack,
   Wrap,
   WrapItem,
   useToast,
-  Stack,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { MdEmail, MdLocationOn, MdOutlineEmail } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
 import { BsGithub, BsPerson } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { Formik, FormikProps } from "formik";
 import * as Yup from "yup";
 import InputText from "./components/InputText";
 import TextArea from "./components/TextArea";
+import SocialButton from "./components/SocialButton";
+import { GITHUB_URL, LINKEDIN_URL } from "../common/Constants";
+import ContactInformation from "./components/ContactInformation";
 
 export interface ContactFormValues {
   name: string;
@@ -80,13 +81,7 @@ const ContactForm = (): JSX.Element => {
   };
 
   return (
-    <Container
-      maxW="full"
-      mt={0}
-      centerContent
-      overflow="hidden"
-      id="contact-me"
-    >
+    <Container maxW="full" mt={0} centerContent overflow="hidden" id="contact-me">
       <Flex>
         <Box
           bg={useColorModeValue("#f4f4f4", "#242526")}
@@ -99,65 +94,29 @@ const ContactForm = (): JSX.Element => {
               <WrapItem>
                 <Box ms={[5, 0]}>
                   <Heading>Contact Me</Heading>
-
-                  <Stack
-                    mt={2}
-                    spacing={4}
-                    display="flex"
-                    justifyContent="flex-start"
-                  >
-                    <Box _hover={{}} display="flex" mt={3}>
-                      <MdEmail
-                        color="#1970F1"
-                        size="20px"
-                        style={{ marginTop: "0.2rem", marginRight: "0.5rem" }}
-                      />
-                      zachspielberger@gmail.com
-                    </Box>
-
-                    <Box _hover={{}} display="flex" mt={3}>
-                      <MdLocationOn
-                        color="#1970F1"
-                        size="20px"
-                        style={{ marginTop: "0.2rem", marginRight: "0.5rem" }}
-                      />
-                      Phoenix, Arizona
-                    </Box>
-                  </Stack>
+                  <ContactInformation />
                   <HStack
                     mt={{ lg: 10, md: 10 }}
                     spacing={5}
                     px={5}
                     alignItems="flex-start"
                   >
-                    <IconButton
-                      aria-label="github"
-                      variant="ghost"
-                      size="lg"
-                      isRound={true}
-                      _hover={{ bg: "#0D74FF", color: "#ffffff" }}
+                    <SocialButton
+                      link={GITHUB_URL}
+                      label="Zachary Spielberger GitHub"
                       icon={<BsGithub size="28px" />}
                     />
-                    <IconButton
-                      aria-label="facebook"
-                      variant="ghost"
-                      size="lg"
-                      isRound={true}
-                      _hover={{ bg: "#0D74FF", color: "#ffffff" }}
+                    <SocialButton
+                      link={LINKEDIN_URL}
+                      label="Zachary Spielberger LinkedIn"
                       icon={<FaLinkedin size="28px" />}
                     />
                   </HStack>
                 </Box>
               </WrapItem>
               <WrapItem>
-                <Box
-                  bg={colorMode === "light" ? "white" : "none"}
-                  borderRadius="lg"
-                >
-                  <Box
-                    m={[5, 8]}
-                    color={colorMode === "light" ? "#0B0E3F" : "white"}
-                  >
+                <Box bg={colorMode === "light" ? "white" : "none"} borderRadius="lg">
+                  <Box m={[5, 8]} color={colorMode === "light" ? "#0B0E3F" : "white"}>
                     <VStack spacing={5}>
                       <Formik
                         initialValues={initialValues}
@@ -184,11 +143,7 @@ const ContactForm = (): JSX.Element => {
                               icon={<MdOutlineEmail color="gray.800" />}
                             />
 
-                            <TextArea
-                              form={props}
-                              label="Message"
-                              formKey="message"
-                            />
+                            <TextArea form={props} label="Message" formKey="message" />
 
                             <Button
                               variant="solid"

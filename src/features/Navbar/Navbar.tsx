@@ -21,8 +21,8 @@ const Navbar = (): JSX.Element => {
     <Flex justifyContent="flex-end" mt={2}>
       <Flex position="fixed">
         <Hide below="md">
-          {createNavButton("Zach Spiel GitHub", <FaGithub />, GITHUB_URL)}
-          {createNavButton("Zach Spiel LinkedIn", <FaLinkedin />, LINKEDIN_URL)}
+          {createNavButton("Zachary Spielberger GitHub", <FaGithub />, GITHUB_URL)}
+          {createNavButton("Zachary Spielberger LinkedIn", <FaLinkedin />, LINKEDIN_URL)}
           {createNavButton("Contact me", <FaEnvelope />, "#contact-me")}
         </Hide>
         <ColorModeSwitcher mr={2} />
