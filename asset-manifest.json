@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.90403a38.css",
-    "main.js": "/static/js/main.03e49757.js",
+    "main.js": "/static/js/main.61f07a68.js",
     "static/media/bobs-burgers.png": "/static/media/bobs-burgers.20a7f69f0f7299c1e676.png",
     "static/media/visualizingAntarctica.png": "/static/media/visualizingAntarctica.f0208deb276c11d56ff9.png",
     "static/media/researchPlugin.jpg": "/static/media/researchPlugin.88b8858c2948338dc7af.jpg",
@@ -11,10 +11,10 @@
     "static/media/microchip.png": "/static/media/microchip.f1f4c1bd654754d86fdc.png",
     "index.html": "/index.html",
     "main.90403a38.css.map": "/static/css/main.90403a38.css.map",
-    "main.03e49757.js.map": "/static/js/main.03e49757.js.map"
+    "main.61f07a68.js.map": "/static/js/main.61f07a68.js.map"
   },
   "entrypoints": [
     "static/css/main.90403a38.css",
-    "static/js/main.03e49757.js"
+    "static/js/main.61f07a68.js"
   ]
 }
