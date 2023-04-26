@@ -49,7 +49,7 @@ const ContactForm = (): JSX.Element => {
     });
 
     let response = await fetch(
-      "https://zachary-spielberger-portfolio-server.vercel.app/",
+      "https://zachary-spielberger-portfolio-server.vercel.app/contact",
       {
         method: "POST",
         headers: {
