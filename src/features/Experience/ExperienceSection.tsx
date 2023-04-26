@@ -16,7 +16,7 @@ const ExperienceSection = () => {
     <SectionContainer header="Experience 👨‍💻">
       <Wrap spacing={4} pb={4}>
         <ExperienceCard
-          title="Sofware Developer 1"
+          title="Sofware Developer II"
           company="Microchip Technology"
           date="January 2021 - Present"
           companyLogo={Microchip}

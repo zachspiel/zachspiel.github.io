@@ -49,7 +49,7 @@ const ContactForm = (): JSX.Element => {
     });
 
     let response = await fetch(
-      "https://zachspiel-portfolio-server.herokuapp.com/contact",
+      "https://zachary-spielberger-portfolio-server.vercel.app/",
       {
         method: "POST",
         headers: {
