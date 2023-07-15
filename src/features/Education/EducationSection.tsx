@@ -11,6 +11,7 @@ const EducationSection = (): JSX.Element => {
         <Box
           maxW={"445px"}
           w={"full"}
+          borderWidth="1px"
           bg={useColorModeValue("white", "#242526")}
           boxShadow={"md"}
           rounded={"md"}

@@ -14,6 +14,7 @@ const Card = (props: Props): JSX.Element => {
       maxW="445px"
       w="full"
       h="100%"
+      borderWidth="1px"
       bg={useColorModeValue("white", "#242526")}
       boxShadow="md"
       rounded="md"
@@ -36,7 +37,13 @@ const Card = (props: Props): JSX.Element => {
         <img
           src={props.image}
           alt={props.imageAlt ?? ""}
-          style={{ flexShrink: 0, minWidth: "100%", maxWidth: "100%" }}
+          style={{
+            flexShrink: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "fill",
+            objectPosition: "center",
+          }}
         />
       </Box>
       <Stack>

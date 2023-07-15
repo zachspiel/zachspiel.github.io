@@ -30,7 +30,6 @@ const ProjectSection = (): JSX.Element => {
           title="Secret Santa Generator"
           imageUrl={secretSanta}
           githubUrl="https://github.com/zachspiel/secret-santa"
-          websiteUrl="https://spiel-secret-santa.herokuapp.com/"
           description={SECRET_SANTA_DESCRIPTION}
           languages={["TypeScript", "React", "MongoDB", "Node"]}
           date={"November 2021 - January 2022"}

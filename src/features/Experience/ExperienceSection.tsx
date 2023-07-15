@@ -3,7 +3,7 @@ import { Wrap } from "@chakra-ui/react";
 import ExperienceCard from "./components/ExperienceCard";
 import Microchip from "../../images/microchip.png";
 import NAU from "../../images/nau.jpg";
-import Outlier from "../../images/outlier.png";
+import Outlier from "../../images/outlier.jpeg";
 import {
   MICROCHIP_DESCRIPTION,
   NAU_DESCRIPTION,
