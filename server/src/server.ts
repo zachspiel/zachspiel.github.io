@@ -3,29 +3,24 @@ import cors from "cors";
 import * as dotenv from "dotenv";
 import * as nodemailer from "nodemailer";
 
-const router = express.Router();
-
 dotenv.config();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5004;
 const EMAIL = process.env.USER_EMAIL || "";
 const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD || "";
+const isProduction = process.env.NODE_ENV === "production";
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: isProduction
+      ? "https://zachspiel.github.io"
+      : "http://localhost:3000",
+    methods: ["POST"],
+  }),
+);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "origin, X-Requested-With,Content-Type,Accept, Authorization"
-  );
-  next();
-});
-
-app.use("/", router);
 
 const contactEmail = nodemailer.createTransport({
   service: "gmail",
@@ -43,10 +38,8 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/contact", (req, res) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const message = req.body.message;
+app.post("/contact", (req, res) => {
+  const { name, email, message } = req.body;
   const mail = {
     from: name,
     to: EMAIL,

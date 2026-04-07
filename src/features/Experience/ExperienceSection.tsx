@@ -1,9 +1,9 @@
-import React from "react";
 import { Wrap } from "@chakra-ui/react";
 import ExperienceCard from "./components/ExperienceCard";
 import Microchip from "../../images/microchip.png";
 import NAU from "../../images/nau.jpg";
 import Outlier from "../../images/outlier.jpeg";
+import Paze from "../../images/paze.png";
 import {
   MICROCHIP_DESCRIPTION,
   NAU_DESCRIPTION,
@@ -17,8 +17,19 @@ const ExperienceSection = () => {
       <Wrap spacing={4} pb={4}>
         <ExperienceCard
           title="Sofware Developer II"
+          company="Paze"
+          date="March 2025 - Present"
+          companyLogo={Paze}
+          bulletPoints={[]}
+          imageStyles={{
+            maxWidth: "200px",
+            maxHeight: "100px",
+          }}
+        />
+        <ExperienceCard
+          title="Sofware Developer II"
           company="Microchip Technology"
-          date="January 2021 - Present"
+          date="January 2021 - March 2025"
           companyLogo={Microchip}
           bulletPoints={MICROCHIP_DESCRIPTION}
         />

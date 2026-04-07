@@ -1,4 +1,4 @@
-import React from "react";
+import { CSSProperties } from "react";
 import { ListItem, UnorderedList, useColorModeValue } from "@chakra-ui/react";
 import Card from "../../common/components/Card";
 import MotionContainer from "../../common/components/MotionContainer";
@@ -9,6 +9,7 @@ interface Props {
   companyLogo: string;
   date: string;
   bulletPoints: string[];
+  imageStyles?: CSSProperties;
 }
 
 const ExperienceCard = (props: Props): JSX.Element => {
@@ -34,6 +35,7 @@ const ExperienceCard = (props: Props): JSX.Element => {
         image={props.companyLogo}
         body={createBulletPoints()}
         date={props.date}
+        imageStyles={props.imageStyles}
       />
     </MotionContainer>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { Box, useColorModeValue, Stack, Heading, Text } from "@chakra-ui/react";
 
 interface Props {
@@ -7,12 +7,13 @@ interface Props {
   body: JSX.Element;
   date: string;
   imageAlt?: string;
+  imageStyles?: CSSProperties;
 }
 const Card = (props: Props): JSX.Element => {
   return (
     <Box
       maxW="445px"
-      w="full"
+      minW="300px"
       h="100%"
       borderWidth="1px"
       bg={useColorModeValue("white", "#242526")}
@@ -43,6 +44,7 @@ const Card = (props: Props): JSX.Element => {
             height: "100%",
             objectFit: "fill",
             objectPosition: "center",
+            ...props.imageStyles,
           }}
         />
       </Box>

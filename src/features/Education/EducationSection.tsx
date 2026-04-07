@@ -1,16 +1,39 @@
-import React from "react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
-import { Box, Stack, Heading, Text } from "@chakra-ui/layout";
+import { Box, Stack, Heading, Text, Wrap } from "@chakra-ui/layout";
 import SectionContainer from "../common/components/SectionContainer";
-import MotionContainer from "../common/components/MotionContainer";
 
 const EducationSection = (): JSX.Element => {
   return (
     <SectionContainer header="Education 🎓">
-      <MotionContainer>
+      <Wrap spacing={4} pb={4}>
         <Box
-          maxW={"445px"}
-          w={"full"}
+          className="flex contents-center gap-2 mb-10"
+          maxW="445px"
+          borderWidth="1px"
+          bg={useColorModeValue("white", "#242526")}
+          boxShadow={"md"}
+          rounded={"md"}
+          p={6}
+          mb={2}
+          overflow={"hidden"}
+        >
+          <Stack>
+            <Heading
+              color={useColorModeValue("gray.700", "white")}
+              fontSize={"2xl"}
+              fontFamily={"body"}
+            >
+              Master of Science in Computer Science - Georgia Institute of
+              Technology
+            </Heading>
+          </Stack>
+          <Text color={"gray.500"} mt={2}>
+            Expected December 2026
+          </Text>
+        </Box>
+        <Box
+          maxW="445px"
+          className="flex contents-center gap-2 mb-10"
           borderWidth="1px"
           bg={useColorModeValue("white", "#242526")}
           boxShadow={"md"}
@@ -33,7 +56,7 @@ const EducationSection = (): JSX.Element => {
             May 2021
           </Text>
         </Box>
-      </MotionContainer>
+      </Wrap>
     </SectionContainer>
   );
 };

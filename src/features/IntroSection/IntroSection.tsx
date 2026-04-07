@@ -22,7 +22,7 @@ const IntroSection = (): JSX.Element => {
             Zachary Spielberger
           </Heading>
         </MotionContainer>
-        <Text fontSize="xl">Sofware Developer at Microchip Technology</Text>
+        <Text fontSize="xl">Software Engineer II at Paze℠</Text>
       </Stack>
       <Box w={{ base: "80%", sm: "60%", md: "40%" }} mb={{ base: 12, md: 0 }}>
         <Image

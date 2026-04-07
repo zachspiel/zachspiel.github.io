@@ -9,7 +9,7 @@ interface Props {
 const SectionContainer = (props: Props): JSX.Element => {
   return (
     <Flex px={16} mb={16}>
-      <Stack spacing={4}>
+      <Stack spacing={4} width="100%">
         <Heading>{props.header}</Heading>
         {props.children}
       </Stack>

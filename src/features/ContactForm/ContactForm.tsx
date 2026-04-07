@@ -56,7 +56,7 @@ const ContactForm = (): JSX.Element => {
           "Content-Type": "application/json;charset=utf-8",
         },
         body: JSON.stringify(formData),
-      }
+      },
     );
 
     let result = await response.json();
@@ -81,7 +81,13 @@ const ContactForm = (): JSX.Element => {
   };
 
   return (
-    <Container maxW="full" mt={0} centerContent overflow="hidden" id="contact-me">
+    <Container
+      maxW="full"
+      mt={0}
+      centerContent
+      overflow="hidden"
+      id="contact-me"
+    >
       <Flex>
         <Box
           bg={useColorModeValue("#f4f4f4", "#242526")}
@@ -115,8 +121,14 @@ const ContactForm = (): JSX.Element => {
                 </Box>
               </WrapItem>
               <WrapItem>
-                <Box bg={colorMode === "light" ? "white" : "none"} borderRadius="lg">
-                  <Box m={[5, 8]} color={colorMode === "light" ? "#0B0E3F" : "white"}>
+                <Box
+                  bg={colorMode === "light" ? "white" : "none"}
+                  borderRadius="lg"
+                >
+                  <Box
+                    m={[5, 8]}
+                    color={colorMode === "light" ? "#0B0E3F" : "white"}
+                  >
                     <VStack spacing={5}>
                       <Formik
                         initialValues={initialValues}
@@ -143,7 +155,11 @@ const ContactForm = (): JSX.Element => {
                               icon={<MdOutlineEmail color="gray.800" />}
                             />
 
-                            <TextArea form={props} label="Message" formKey="message" />
+                            <TextArea
+                              form={props}
+                              label="Message"
+                              formKey="message"
+                            />
 
                             <Button
                               variant="solid"
